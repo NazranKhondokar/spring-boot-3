@@ -44,11 +44,13 @@ public abstract class BaseEntity implements Serializable {
     private RecordStatus recordStatus;
 
     @JdbcTypeCode(SqlTypes.UUID)
-    @Column(name = "CREATOR", updatable = false, columnDefinition = "uniqueidentifier")
+//    @Column(name = "CREATOR", updatable = false, columnDefinition = "uniqueidentifier")
+    @Column(name = "CREATOR", updatable = false)
     private UUID createdBy;
 
     @JdbcTypeCode(SqlTypes.UUID)
-    @Column(name = "UPDATOR", columnDefinition = "uniqueidentifier")
+//    @Column(name = "UPDATOR", columnDefinition = "uniqueidentifier")
+    @Column(name = "UPDATOR")
     private UUID updatedBy;
 
     @PrePersist

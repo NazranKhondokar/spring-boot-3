@@ -30,6 +30,8 @@ dependencies {
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0' // this is for swagger
 	// https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc
 	implementation 'com.microsoft.sqlserver:mssql-jdbc'
+	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'
 	implementation 'org.jboss.resteasy:resteasy-client:6.2.5.Final'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	compileOnly 'org.projectlombok:lombok'
