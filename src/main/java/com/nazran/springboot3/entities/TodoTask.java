@@ -9,7 +9,6 @@ import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Getter
 @Setter
