@@ -1,19 +1,17 @@
 package com.nazran.springboot3.enums;
 
-public enum RecordStatus {
-    DRAFT("DRAFT"),
-    ACTIVE("ACTIVE"),
-    INACTIVE("INACTIVE"),
-    DELETED("DELETED");
+public enum TaskCompletionStatus {
+
+    UNCOMPLETED("UNCOMPLETED"),
+    COMPLETED("COMPLETED");
 
     private final String label;
 
-    RecordStatus(String label) {
+    TaskCompletionStatus(String label) {
         this.label = label;
     }
 
     public String getLabel() {
         return label;
     }
-
 }
