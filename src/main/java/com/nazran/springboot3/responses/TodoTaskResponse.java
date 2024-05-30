@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -17,8 +18,8 @@ public class TodoTaskResponse implements Serializable {
     private Long id;
     private String todoTaskName;
     private String todoTaskDetails;
-    private Date todoTaskStartDate;
-    private Date todoTaskEndDate;
+    private LocalDate todoTaskStartDate;
+    private LocalDate todoTaskEndDate;
     private TaskCompletionStatus taskCompletionStatus;
 
     public static TodoTaskResponse select(TodoTask todoTask) {

@@ -8,7 +8,7 @@ import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -31,10 +31,10 @@ public class TodoTask extends BaseEntity {
     private String todoTaskDetails;
 
     @Column(name = "TODO_TASK_START_DATE")
-    private Date todoTaskStartDate;
+    private LocalDate todoTaskStartDate;
 
     @Column(name = "TODO_TASK_END_DATE")
-    private Date todoTaskEndDate;
+    private LocalDate todoTaskEndDate;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "TODO_TASK_STATUS")
