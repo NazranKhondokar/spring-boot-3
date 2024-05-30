@@ -1,6 +1,7 @@
 package com.nazran.springboot3.validators;
 
 import com.nazran.springboot3.dto.TodoTaskDTO;
+import com.nazran.springboot3.exceptions.CustomMessageException;
 import com.nazran.springboot3.services.impl.TodoTaskServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -22,5 +23,8 @@ public class TodoTaskValidator implements Validator {
     public void validate(Object target, Errors errors) {
         TodoTaskDTO dto = (TodoTaskDTO) target;
 
+        if (dto.getTodoTaskStartDate().isAfter(dto.getTodoTaskEndDate())) {
+            throw new CustomMessageException("Task end date should not less than start date");
+        }
     }
 }
