@@ -149,7 +149,7 @@ public class TodoTaskController {
     })
     public ResponseEntity<JSONObject> updateTaskCompletionStatus(@Valid @RequestBody TaskCompletionStatusDTO dto) {
 
-        Optional<TodoTask> todoTask = service.findById(dto.getEntityId());
+        Optional<TodoTask> todoTask = service.findByIdAndRecordStatusNot(dto.getEntityId(), RecordStatus.DELETED);
         if (todoTask.isEmpty())
             return badRequest().body(error(HttpStatus.NOT_FOUND, "TodoTask not found with id: " + dto.getEntityId()).getJson());
 
