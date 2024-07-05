@@ -23,7 +23,7 @@ spring:
 #    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     url: jdbc:mysql://localhost:3306/gems?trustServerCertificate=true;
     username: nazran
-    password: "password"
+    password: password
     driver-class-name: com.mysql.cj.jdbc.Driver
 
     # Hikari Configuration
