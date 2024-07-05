@@ -17,14 +17,14 @@ spring:
   jackson:
     date-format: yyyy-MM-dd
   datasource:
-    url: jdbc:sqlserver://<IP>:<PORT>;databaseName=<NAME>;trustServerCertificate=true;
-    username: <USERNAME>
-    password: <PASSWORD>
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-#    url: jdbc:mysql://localhost:3306/gems?trustServerCertificate=true;
-#    username: nazran
-#    password: "password"
-#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:sqlserver://<IP>:<PORT>;databaseName=<NAME>;trustServerCertificate=true;
+#    username: <USERNAME>
+#    password: <PASSWORD>
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:mysql://localhost:3306/gems?trustServerCertificate=true;
+    username: nazran
+    password: "password"
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
     # Hikari Configuration
     hikari:
@@ -39,8 +39,8 @@ spring:
   jpa:
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.SQLServer2012Dialect
-#        dialect: org.hibernate.dialect.MySQLDialect
+#        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        dialect: org.hibernate.dialect.MySQLDialect
         naming:
           implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
           physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
